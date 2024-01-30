@@ -89,6 +89,10 @@ function showModal(event) {
 
   const modalLinks = document.getElementById("modal-links");
 
+  while (modalLinks.firstChild) {
+    modalLinks.removeChild(modalLinks.firstChild); // remove any existing links
+  }
+
   if (projectsData[dataIndex].link) {
     const link = document.createElement("a");
     link.innerText = projectsData[dataIndex].link[0];
