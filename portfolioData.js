@@ -16,8 +16,17 @@ const projectsData = [
       "This site generates random Mondrian-style images. It was built with HTML and JavaScript.",
     categories: ["Randomness"],
     description:
-      "I love Mondrian paintings. They're iconic, of course -- they reduce image composition to primary colors in orthagonal arrangements. I wondered whether a simple algorithm could generate a pleasing composition in a similar style. I think this project does, at least sometimes!",
-    link: ["Link to website", "https://q72.site/mond-random"],
+      "This site randomly generates orthagonal black lines and fills the resulting rectangles with white and primary colors. If you refresh the page a few times you may see compositions that you feel are more or less pleasing or 'Mondrian-like.'",
+    link: ["q72.site/mond-random", "https://q72.site/mond-random"],
     gitHubUrl: "https://github.com/stuart-rickard/mond-random",
+  },
+  {
+    title: "Reporter",
+    blurb:
+      "A chat-interface game where you play as a reporter who pursues a story about Pancho Villa. The game will also generate images of scenes. Utilizes ChatGPT.",
+    categories: ["LLM", "Game"],
+    description: "",
+    link: ["q72.site/reporter", "https://q72.site/reporter"],
+    gitHubUrl: "https://github.com/stuart-rickard/reporter-site", // TODO: add backend repo
   },
 ];
