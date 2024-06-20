@@ -1,15 +1,16 @@
 // categories: Flutter, LLM, Game, React, Typographic, Randomness
 
 const projectsData = [
-  // {
-  //   title: "Mega Search",
-  //   blurb:
-  //     "This very simple app uses LangChain to provide OpenAI with access to SerpApi for more current and in-depth responses.",
-  //   categories: ["LLM"],
-  //   description:
-  //     "This very simple app uses LangChain to provide OpenAI with access to SerpApi for more current and in-depth information.",
-  //   gitHubUrl: "https://google.com",
-  // },
+  {
+    title: "Mega Search",
+    blurb:
+      "This very simple chat interface uses LangChain to provide OpenAI with access to SerpApi (Google searches) for more current and in-depth responses to queries.",
+    categories: ["LLM"],
+    description:
+      "The frontend of this site simply forwards the user's query to the backend and awaits a response. The backend is built with Express and uses LangChain to provide OpenAI with access to SerpApi. There is a limit of 10 queries per 48 hours.",
+    link: ["q72.site/mega-search", "https://q72.site/mega-search"],
+    gitHubUrl: "https://github.com/stuart-rickard/mega-search",
+  },
   {
     title: "Mond Random",
     blurb:
