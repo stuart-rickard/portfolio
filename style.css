@@ -5,7 +5,6 @@
 #header {
   position: fixed;
   z-index: 1; /* Higher value to bring it to the front */
-
   top: 0;
   left: 0;
   right: 0;
@@ -62,48 +61,44 @@
   margin-right: auto;
 }
 
-.square {
-  width: 250px; /* Width of each square */
-  height: 250px; /* Height of each square */
-  margin: 17px; /* Space around each square */
+.card-square {
+  width: 250px; /* Width of each card-square */
+  height: 250px; /* Height of each card-square */
+  margin: 17px; /* Space around each card-square */
+  box-sizing: border-box; /* Ensure padding and border are included in the height */
+
   display: flex;
-  justify-content: center; /* Center content horizontally */
+  justify-content: flex-start; /* Align content to the top */
   flex-direction: column;
-  align-items: center; /* Center content vertically */
-  background-color: white; /* Background color of squares */
-  border: 1px solid #ddd; /* Border for squares */
+
+  align-items: center; /* Center content horizontally */
+
+  background-color: white; /* Background color of card-squares */
+  border: 1px solid #ddd; /* Border for card-squares */
   border-radius: 5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Neumorphic shadow effect */
+
   transition: font-weight 0.3s ease; /* Transition effect for smooth hover */
 }
 
-.square:hover {
+.card-square:hover {
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); /* Neumorphic shadow effect */
 }
 
 .project-title {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.blurb {
-  display: flex;
-  justify-content: center;
-  min-height: 70px;
-  max-width: 200px;
+  /* margin-bottom: 10px; */
   text-align: center;
 }
 
-.blue-border {
-  border: 5px solid blue;
-  margin: 12px;
+.blurb {
+  flex-grow: 1; /* Takes up the remaining space between title and icon row */
+  text-align: center;
+  max-width: 200px;
 }
 
 .dots-container {
-  position: relative; /* Position relative to the parent element */
-  bottom: auto; /* Reset the bottom property */
-  /*  align-self: flex-end; /* Align at the bottom of the parent element */
   display: flex; /* Use flexbox */
   justify-content: center; /* Center dots horizontally */
 }

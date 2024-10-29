@@ -1,18 +1,18 @@
 function appendCards(cardsContainter) {
   // Loop through projectsData to create project cards and append to container element
   for (item of projectsData) {
-    const square = document.createElement("div");
-    square.className = "square";
+    const cardSquare = document.createElement("div");
+    cardSquare.className = "card-square";
 
     const projectTitle = document.createElement("p");
     projectTitle.className = "project-title";
     projectTitle.textContent = item.title;
-    square.appendChild(projectTitle);
+    cardSquare.appendChild(projectTitle);
 
     const paragraph = document.createElement("p");
     paragraph.className = "blurb";
     paragraph.textContent = item.blurb;
-    square.appendChild(paragraph);
+    cardSquare.appendChild(paragraph);
 
     const dotsContainer = document.createElement("div");
     dotsContainer.className = "dots-container";
@@ -24,17 +24,17 @@ function appendCards(cardsContainter) {
       dot.style.backgroundColor = colors[categories.indexOf(category)];
       dotsContainer.appendChild(dot);
     });
-    square.appendChild(dotsContainer);
+    cardSquare.appendChild(dotsContainer);
 
-    square.dataset.dataIndex = projectsData.indexOf(item);
+    cardSquare.dataset.dataIndex = projectsData.indexOf(item);
 
-    cardsContainer.appendChild(square);
+    cardsContainer.appendChild(cardSquare);
   }
 
   document.addEventListener("DOMContentLoaded", (event) => {
-    const squares = document.querySelectorAll(".square");
-    squares.forEach((square) => {
-      square.addEventListener("click", showModal);
+    const cardSquares = document.querySelectorAll(".cardSquare");
+    cardSquares.forEach((cardSquare) => {
+      cardSquare.addEventListener("click", showModal);
     });
   });
 }
