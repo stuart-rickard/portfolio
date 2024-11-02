@@ -3,13 +3,13 @@ const colors = [
   "orange",
   "green",
   "blue",
-  "pink",
+  //   "pink",
   "brown",
-  "cyan",
+  //   "cyan",
   "magenta",
-  "teal",
+  //   "teal",
   "indigo",
-  "lime",
+  //   "lime",
   "olive",
 ];
 
@@ -38,6 +38,9 @@ function appendLegendItems(legend) {
 
     legendItem.appendChild(dot);
     legendItem.appendChild(label);
+
+    // Add click listener to log the color of the legendItem
+    legendItem.addEventListener("click", reorderCards);
 
     legend.appendChild(legendItem);
   }

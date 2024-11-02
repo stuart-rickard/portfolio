@@ -50,4 +50,41 @@ const projectsData = [
     link: ["q72.site/reporter", "https://q72.site/reporter"],
     gitHubUrl: "https://github.com/stuart-rickard/reporter-site", // TODO: add backend repo
   },
+  {
+    title: "Example",
+    blurb:
+      "A chat-interface game where you play as a reporter who pursues a story about Pancho Villa. The game will also generate images of scenes. Utilizes ChatGPT; pretty long Mexican revolutionary active in Northern Mexico who attacked Columbus, New Mexico in 1916. The game is set in 1916 and the player is a reporter who is trying to get the story of Villa's life and activities.",
+    categories: ["LLM", "Game"],
+    description:
+      "Pancho Villa was Mexican revolutionary active in Northern Mexico who attacked Columbus, New Mexico in 1916. The game is set in 1916 and the player is a reporter who is trying to get the story of Villa's life and activities. The game will generate images of scenes. The game uses ChatGPT to generate responses to the player's input.",
+    link: ["q72.site/reporter", "https://q72.site/reporter"],
+    gitHubUrl: "https://github.com/stuart-rickard/reporter-site", // TODO: add backend repo
+  },
+  {
+    title: "Another With A Longer Title",
+    blurb: "A short game T",
+    categories: ["LLM", "Game"],
+    description:
+      "Pancho Villa was Mexican revolutionary active in Northern Mexico who attacked Columbus, New Mexico in 1916. The game is set in 1916 and the player is a reporter who is trying to get the story of Villa's life and activities. The game will generate images of scenes. The game uses ChatGPT to generate responses to the player's input.",
+    link: ["q72.site/reporter", "https://q72.site/reporter"],
+    gitHubUrl: "https://github.com/stuart-rickard/reporter-site", // TODO: add backend repo
+  },
+  {
+    title: "Another With A Longer Title",
+    blurb: "A short game T",
+    categories: [
+      "LLM",
+      "Game",
+      "React",
+      "Typographic",
+      "Randomness",
+      "Flutter",
+      "LLM",
+      "zzzz",
+    ],
+    description:
+      "Pancho Villa was Mexican revolutionary active in Northern Mexico who attacked Columbus, New Mexico in 1916. The game is set in 1916 and the player is a reporter who is trying to get the story of Villa's life and activities. The game will generate images of scenes. The game uses ChatGPT to generate responses to the player's input.",
+    link: ["q72.site/reporter", "https://q72.site/reporter"],
+    gitHubUrl: "https://github.com/stuart-rickard/reporter-site", // TODO: add backend repo
+  },
 ];

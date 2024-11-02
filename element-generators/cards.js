@@ -1,18 +1,18 @@
-function appendCards(cardsContainter) {
+function appendCards(cardsContainer) {
   // Loop through projectsData to create project cards and append to container element
   for (item of projectsData) {
     const cardSquare = document.createElement("div");
     cardSquare.className = "card-square";
 
-    const projectTitle = document.createElement("p");
+    const projectTitle = document.createElement("div");
     projectTitle.className = "project-title";
     projectTitle.textContent = item.title;
     cardSquare.appendChild(projectTitle);
 
-    const paragraph = document.createElement("p");
-    paragraph.className = "blurb";
-    paragraph.textContent = item.blurb;
-    cardSquare.appendChild(paragraph);
+    const blurb = document.createElement("div");
+    blurb.className = "blurb";
+    blurb.textContent = item.blurb;
+    cardSquare.appendChild(blurb);
 
     const dotsContainer = document.createElement("div");
     dotsContainer.className = "dots-container";
@@ -31,10 +31,8 @@ function appendCards(cardsContainter) {
     cardsContainer.appendChild(cardSquare);
   }
 
-  document.addEventListener("DOMContentLoaded", (event) => {
-    const cardSquares = document.querySelectorAll(".cardSquare");
-    cardSquares.forEach((cardSquare) => {
-      cardSquare.addEventListener("click", showModal);
-    });
+  const cardSquares = document.querySelectorAll(".card-square");
+  cardSquares.forEach((cardSquare) => {
+    cardSquare.addEventListener("click", showModal);
   });
 }

@@ -11,12 +11,14 @@
   </head>
   <body>
     <div id="header">
-      <h3 id="title">portfolio</h3>
-      <div id="legend">
-        <p>legend:</p>
+      <div id="header-content">
+        <div id="title">portfolio</div>
+        <div id="legend">
+          <div>legend / sort:</div>
+        </div>
       </div>
     </div>
-    <div style="height: 270px">&nbsp;</div> <!-- spacer -->
+    <div id="spacer">&nbsp;</div> <!-- spacer -->
     <div id="cards-container"></div> 
     <!-- <div style="height: 100px">&nbsp;</div> -->
 
@@ -40,6 +42,8 @@
     <script src="element-generators/categories.js"></script>
     <script src="element-generators/cards.js"></script>
     <script src="element-generators/modal.js"></script>
+    <script src="rendering-functions/spacer-height.js"></script>
+    <script src="rendering-functions/reorder-cards.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

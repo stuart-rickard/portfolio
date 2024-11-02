@@ -4,17 +4,30 @@
 
 #header {
   position: fixed;
-  z-index: 1; /* Higher value to bring it to the front */
+  z-index: 20; /* Higher value to bring it to the front */
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent white background */
+}
+#header-content {
   text-align: center;
-  margin: 20px;
   max-width: 550px;
   margin-left: auto;
   margin-right: auto;
 }
+#spacer {
+  height: 220px;
+  position: static;
+}
 #title {
+  margin-top: 40px;
   font-size: 35px;
   font-weight: bold;
   display: inline-block;
@@ -30,6 +43,7 @@
 }
 
 #legend {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -39,9 +53,10 @@
 .legend-item {
   display: flex;
   align-items: center;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   /* font-size: 20px; */
   font-weight: normal;
+  cursor: pointer;
 }
 
 .dot {
@@ -52,19 +67,22 @@
 }
 
 #cards-container {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  transition: all 0.5s ease;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .card-square {
   width: 250px; /* Width of each card-square */
   height: 250px; /* Height of each card-square */
-  margin: 17px; /* Space around each card-square */
   box-sizing: border-box; /* Ensure padding and border are included in the height */
 
   display: flex;
@@ -78,7 +96,12 @@
   border-radius: 5%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Neumorphic shadow effect */
 
-  transition: font-weight 0.3s ease; /* Transition effect for smooth hover */
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.card-square.moving {
+  transform: scale(1.1); /* Slight zoom effect during movement */
 }
 
 .card-square:hover {
@@ -88,19 +111,23 @@
 .project-title {
   font-size: 20px;
   font-weight: bold;
-  /* margin-bottom: 10px; */
+  margin-top: 20px;
   text-align: center;
 }
 
 .blurb {
   flex-grow: 1; /* Takes up the remaining space between title and icon row */
+  margin-top: 17px;
   text-align: center;
   max-width: 200px;
+  overflow: hidden; /* Hide overflow text */
 }
 
 .dots-container {
   display: flex; /* Use flexbox */
   justify-content: center; /* Center dots horizontally */
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #footer {
@@ -111,13 +138,13 @@
   text-align: center;
   font-size: 20px;
   font-weight: bold;
-  margin: 20px;
+  /* margin: 20px; */
   display: inline-block;
   background-color: rgba(
     255,
     255,
     255,
-    0.7
+    0.9
   ); /* Semi-transparent white background */
   padding: 5px 10px;
 }
@@ -129,7 +156,7 @@
 #modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 2; /* Sit on top */
+  z-index: 30; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
