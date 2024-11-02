@@ -1,4 +1,5 @@
-function reorderCards() {
+function reorderCards(event) {
+  const category = event.currentTarget.lastChild.textContent;
   const container = document.querySelector("#cards-container");
   const items = Array.from(container.children);
 
@@ -9,7 +10,12 @@ function reorderCards() {
     initialPositions.set(item, rect);
   });
 
-  const sortedItems = items.sort(() => Math.random() - 0.5);
+  const sortedItems = items.sort((a, b) =>
+    projectsData[a.dataset.dataIndex].categories.includes(category) &&
+    !projectsData[b.dataset.dataIndex].categories.includes(category)
+      ? -1
+      : 1
+  );
 
   // Rearrange the items in the DOM
   sortedItems.forEach((item) => {

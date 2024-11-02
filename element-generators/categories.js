@@ -1,16 +1,23 @@
 // Array of colors for the dots
 const colors = [
+  "SteelBlue",
   "orange",
   "green",
   "blue",
-  //   "pink",
   "brown",
-  //   "cyan",
   "magenta",
-  //   "teal",
-  "indigo",
-  //   "lime",
   "olive",
+  "purple",
+  "red",
+  "MediumSeaGreen",
+  "Goldenrod",
+  "Coral",
+  "MediumSlateBlue",
+  "Tomato",
+  "DarkKhaki",
+  "SkyBlue",
+  "SpringGreen",
+  "SandyBrown",
 ];
 
 // Array of categories from projectsData
