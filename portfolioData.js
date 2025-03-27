@@ -1,4 +1,4 @@
-// categories: Flutter, LLM, Game, React, Typographic, Randomness
+// categories: Flutter, LLM, Game, React, Typographic, Randomness, Python, Package
 
 const projectsData = [
   {
@@ -31,6 +31,26 @@ const projectsData = [
     link: ["q72.site/reporter", "https://q72.site/reporter"],
     gitHubUrl: "https://github.com/stuart-rickard/reporter-site", // TODO: add backend repo
   },
+  {
+    title: "Chessir",
+    blurb:
+      "A PyPI package for a chess board model that will import and export FEN, generate valid moves, and provide game status.",
+    categories: ["Python", "Package"],
+    description:
+      "Chessir is a fork of the Chessnut PyPI package. It is a chess board model written in Python that is intentionally simple. Like Chessnut, Chessir is not written for speed, but it is about twenty times faster than Chessnut at generating valid chess moves from a given position on a chess board.",
+    link: ["Chessir on PyPI", "https://pypi.org/project/Chessir/"],
+    gitHubUrl: "https://github.com/stuart-rickard/Chessir",
+  },
+  // {
+  //   title: "",
+  //   blurb:
+  //     "",
+  //   categories: ["", ""],
+  //   description:
+  //     "",
+  //   link: ["q72.site/", "https://q72.site/"],
+  //   gitHubUrl: "https://github.com/stuart-rickard/",
+  // },
   // {
   //   title: "Test",
   //   blurb: "This is a test blurb.",
