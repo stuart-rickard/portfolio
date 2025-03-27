@@ -1,23 +1,24 @@
 // Array of colors for the dots
 const colors = [
   "SteelBlue",
-  "orange",
+  "purple",
   "green",
   "blue",
-  "brown",
-  "magenta",
-  "olive",
-  "purple",
   "red",
-  "MediumSeaGreen",
+  "olive",
+  "magenta",
   "Goldenrod",
-  "Coral",
-  "MediumSlateBlue",
-  "Tomato",
-  "DarkKhaki",
+  "gray",
   "SkyBlue",
-  "SpringGreen",
-  "SandyBrown",
+  "brown",
+  // "SandyBrown",
+  // "orange",
+  // "MediumSeaGreen",
+  // "Coral",
+  // "MediumSlateBlue",
+  // "Tomato",
+  // "DarkKhaki",
+  // "SpringGreen",
 ];
 
 // Array of categories from projectsData
@@ -29,7 +30,7 @@ const categories = [
   ),
 ];
 
-function appendLegendItems(legend) {
+function prepareLegendItems(legendItems) {
   // Loop through the categories to create legend items and append to legend element
   for (item of categories) {
     const legendItem = document.createElement("div");
@@ -37,7 +38,8 @@ function appendLegendItems(legend) {
 
     const dot = document.createElement("span");
     dot.className = "dot";
-    dot.style.backgroundColor = colors[categories.indexOf(item)];
+    dot.style.backgroundColor = colors[categories.indexOf(item)] || "black";
+    dot.textContent = item.charAt(0).toUpperCase();
 
     const label = document.createElement("span");
     label.textContent = item;
@@ -49,6 +51,12 @@ function appendLegendItems(legend) {
     // Add click listener to log the color of the legendItem
     legendItem.addEventListener("click", reorderCards);
 
-    legend.appendChild(legendItem);
+    legendItems[item] = { item: legendItem, dot: dot };
+  }
+}
+
+function appendLegendItems(legend, legendItems) {
+  for (const key in legendItems) {
+    legend.appendChild(legendItems[key].item);
   }
 }

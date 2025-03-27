@@ -60,9 +60,14 @@
 }
 
 .dot {
-  width: 15px; /* Dot size */
-  height: 15px; /* Dot size */
+  width: 25px; /* Dot size */
+  height: 25px; /* Dot size */
   border-radius: 50%; /* Make it round */
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 2px; /* Spacing between dots */
 }
 

@@ -1,4 +1,4 @@
-function appendCards(cardsContainer) {
+function appendCards(cardsContainer, legendItems) {
   // Loop through projectsData to create project cards and append to container element
   for (item of projectsData) {
     const cardSquare = document.createElement("div");
@@ -19,10 +19,7 @@ function appendCards(cardsContainer) {
 
     // loop through the categories of each item to create dots and append to dotsContainer
     item.categories.forEach((category) => {
-      const dot = document.createElement("span");
-      dot.className = "dot";
-      dot.style.backgroundColor = colors[categories.indexOf(category)];
-      dotsContainer.appendChild(dot);
+      dotsContainer.appendChild(legendItems[category].dot.cloneNode(true));
     });
     cardSquare.appendChild(dotsContainer);
 

@@ -4,13 +4,14 @@ const spacer = document.getElementById("spacer");
 const modal = document.getElementById("modal");
 // modal is shown when a card is clicked (showModal function)
 
-const legend = document.getElementById("legend");
+let legendItems = {};
+prepareLegendItems(legendItems);
 
-appendLegendItems(legend);
+const legend = document.getElementById("legend");
+appendLegendItems(legend, legendItems);
 
 const cardsContainer = document.getElementById("cards-container");
-
-appendCards(cardsContainer);
+appendCards(cardsContainer, legendItems);
 
 document.addEventListener("DOMContentLoaded", function () {
   adjustSpacerHeight(header, spacer);
